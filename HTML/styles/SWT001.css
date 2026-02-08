@@ -1,5 +1,5 @@
 h1 {
-  font-size: 120px;
+  font-size: 90px;
   text-align: center;
 }
 
@@ -14,5 +14,6 @@ p {
 
 body {
   font-family: "KaiTi", "楷体", "STKaiti", "Kaiti SC", "Kaiti TC", serif;
-  width: 600px;
+  width: 800px;
+  margin: 0 auto;
 }
