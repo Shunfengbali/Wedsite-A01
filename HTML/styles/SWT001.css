@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+h1,
+p {
+  color: #17BC18;
+}
+
+body {
+  font-family: "KaiTi", "楷体", "STKaiti", "Kaiti SC", "Kaiti TC", serif;
+}
