@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<htmlhtml lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="HTML/styles/style001.css" rel="stylesheet" />
+  <title>验证</title>
+</head>
+<body>
+<!--/*<div class="mb-4">
+  <div class="flex">
+    <input type="password" id="apiKey" class="focus:ring-primary" placeholder="sk-..." value="123456">
+    <button id="saveApiKey" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-r-md transition-colors">
+      <i class="fa fa-save mr-1"></i>验证
+    </button>
+  </div>
+  <p id="apiKeyStatus" class="mt-1 text-xs text-gray-500">API密钥未设置</p>
+</div>*/-->
+<p>验证</p>
+<input type="password" id="passwordInput" placeholder="输入密码"><br>
+<button id="submitBtn">跳转</button>
+<script>
+  let attempts = 0;
+  const txt = document.querySelector("p");
+  document.getElementById("submitBtn").addEventListener("click", function() {
+  const password = document.getElementById("passwordInput").value;
+  const encoded = btoa(password);  // 使用标准btoa函数编码
+  console.log("Base64编码结果:", encoded);  // 示例输出
+  const correctPassword = "MDEyMw=="; // 预设密码
+  if (encoded == correctPassword) {
+    window.location.replace("HTML/index.html"); // 跳转目标    
+  } else {
+    txt.textContent = "密码错误！";
+    //alert("密码错误！");
+    if (attempts++ >= 3) {
+      txt.textContent = "错误次数过多，请稍后重试！";
+      submitBtn.disabled = true;
+      setTimeout(() => {
+      submitBtn.disabled = false;
+      }, 3000); // 3秒后
+    }
+  }
+});
+</script>
+<!--/*<button id="loginBtn">提交登录</button>
+<script>
+  documentgetElmentById('loginBtn').addEventListener('click', () => {
+    const isValid = validateForm(); // 自定义验证函数
+    if(isValid) {
+      window.location.replace('dashboard.html'); // 替换历史记录
+    }
+  });
+</script>
+<script>
+  const password = prompt("请输入密码");
+  if (password === "1234") {
+    window.location.replace("index(1).html");
+  } else {
+    alert("登录失败");
+  }
+</script>*/-->
+</body>
+</html>
