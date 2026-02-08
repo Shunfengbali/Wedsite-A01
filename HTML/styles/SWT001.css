@@ -2,6 +2,10 @@ h1 {
   text-align: center;
 }
 
+p {
+  font-size: 2px;
+}
+
 h1,
 p {
   color: #17BC18;
