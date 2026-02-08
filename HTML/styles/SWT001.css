@@ -1,5 +1,5 @@
 h1 {
-  font-size: 90px;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -16,4 +16,7 @@ body {
   font-family: "KaiTi", "楷体", "STKaiti", "Kaiti SC", "Kaiti TC", serif;
   width: 800px;
   margin: 0 auto;
+  background-color: gray;
+  padding: 0 20px 20px 20px;
+  border: 8px solid yellow;
 }
